@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>palette</title>
+    <style>
+        .box {
+            width: 1200px;
+            height: 800px;
+            border:1px solid red;
+            margin:0 auto;
+            
+        }
+        button.active {
+            color: #f00;
+        }
+        #btnList {
+            display: inline;
+        }
+        #container {
+            border:1px solid #333;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="tools">
+        <div id="btnList">
+            <button onclick="flagFn(this, 'pencil')">铅笔</button>
+            <button onclick="flagFn(this, 'ellipse')">椭圆-空心</button>
+            <button onclick="flagFn(this, 'rect')">矩形</button>
+            <button onclick="flagFn(this, 'rectH')">矩形-空心</button>
+            <button onclick="flagFn(this, 'text')">文字</button>
+        </div>
+        <select id="selectColor" onchange="selectColorFn(this);">
+            <option value="red">红色</option>
+            <option value="blue">蓝色</option>
+            <option value="green">绿色</option>
+        </select>
+        <button onclick="removeFn()">删除</button>
+    </div>
+
+    <div id="container"></div>
+</div>
+
+<script src="js/konva.js"></script>
+<script src="./js/palette.js"></script>
+<script>
+</script>
+</body>
+</html>
